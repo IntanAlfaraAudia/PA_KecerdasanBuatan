@@ -1,5 +1,5 @@
 """
-BerryVision - Klasifikasi jenis berry dengan Custom CNN
+BerryVision - Klasifikasi jenis berry
 Proyek Akhir Praktikum Kecerdasan Buatan
 
 """
