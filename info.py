@@ -15,19 +15,19 @@ BERRY_INFO = {
         "ciri": ["Merah oranye sampai merah cerah", "Berbulir dan sering mengkilap", "Kelopak dan batangnya berbulu kemerahan"],
     },
     "black berry": {
-        "label": "Blackberry", "emoji": "🫐", "color": "#a78bfa",
+        "label": "Blackberry", "emoji": "", "color": "#a78bfa",
         "latin": "Rubus fruticosus (agg.)",
         "desc": "Buah majemuk berwarna hitam mengkilap yang tumbuh di semak berduri.",
         "ciri": ["Hitam pekat dan mengkilap", "Tersusun dari banyak butir kecil", "Bentuknya bulat memanjang"],
     },
     "blueberry": {
-        "label": "Blueberry", "emoji": "🔵", "color": "#38bdf8",
+        "label": "Blueberry", "emoji": "", "color": "#38bdf8",
         "latin": "Vaccinium spp.",
         "desc": "Buah bulat kecil berwarna biru keunguan, permukaannya dilapisi lilin keputihan.",
         "ciri": ["Bulat, biru keunguan", "Ada lapisan lilin keputihan", "Ada mahkota kecil di ujung buah"],
     },
     "white mulberry": {
-        "label": "White Mulberry", "emoji": "🤍", "color": "#fcd34d",
+        "label": "White Mulberry", "emoji": "", "color": "#fcd34d",
         "latin": "Morus alba",
         "desc": "Buah pohon murbei putih. Warnanya putih kekuningan, bisa jadi merah muda atau ungu kalau sudah matang.",
         "ciri": ["Putih, krem, atau kehijauan", "Bisa memerah muda saat matang", "Kecil, lonjong, dan bergerombol"],
