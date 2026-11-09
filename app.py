@@ -120,9 +120,12 @@ def quality_report(img):
 
 
 # ----------------------------- Tampilan -------------------------------------
-def callout(kind, icon, text):
+# Definisi baru (aman dari error, otomatis menyesuaikan)
+def callout(kind, icon, text=None):
+    if text is None:
+        text = icon
+        icon = "❌" if kind == "bad" else "⚠️"
     html(f'<div class="callout {kind}"><span class="ic">{icon}</span><div>{text}</div></div>')
-
 
 def render_hero(class_names):
     chips = "".join(
