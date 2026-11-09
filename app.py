@@ -145,9 +145,9 @@ def render_empty():
           <h3>Belum ada foto</h3>
           <p>Upload foto atau ambil lewat kamera di sebelah kiri, nanti hasilnya muncul di sini.</p>
           <div class="tips">
-            <div class="tip">🔍<b>Foto yang tajam</b><span>Foto buram bikin akurasi model turun jauh.</span></div>
-            <div class="tip">💡<b>Cahaya cukup</b><span>Jangan terlalu gelap atau terlalu terang.</span></div>
-            <div class="tip">🎯<b>Buah kelihatan jelas</b><span>Usahakan buahnya mengisi sebagian besar gambar.</span></div>
+            <div class="tip"><b>Foto yang tajam</b><span>Foto buram bikin akurasi model turun jauh.</span></div>
+            <div class="tip"><b>Cahaya cukup</b><span>Jangan terlalu gelap atau terlalu terang.</span></div>
+            <div class="tip"><b>Buah kelihatan jelas</b><span>Usahakan buahnya mengisi sebagian besar gambar.</span></div>
           </div>
         </div>""")
 
@@ -186,10 +186,10 @@ def render_result(class_names, probs, blurry=False):
         callout("bad", "⚠️", f"<b>Model kurang yakin</b> (di bawah {int(LOW_CONF*100)}%). Coba foto yang lebih tajam dan buahnya "
                 "lebih jelas. Ingat juga, model ini cuma kenal 5 jenis berry, jadi objek lain pasti ditebak jadi salah satunya.")
     elif pair and probs[runner] >= 0.25:
-        callout("warn", "🔁", f"<b>Tayberry dan Wineberry memang mirip.</b> Model sempat ragu antara keduanya "
+        callout("warn", "", f"<b>Tayberry dan Wineberry memang mirip.</b> Model sempat ragu antara keduanya "
                 f"({escape(runner_label)} {probs[runner]*100:.0f}%). Dua kelas ini juga yang paling sering tertukar waktu evaluasi.")
     elif probs[runner] >= 0.30:
-        callout("warn", "🤔", f"Tebakan kedua cukup dekat: <b>{escape(runner_label)}</b> ({probs[runner]*100:.0f}%).")
+        callout("warn", "", f"Tebakan kedua cukup dekat: <b>{escape(runner_label)}</b> ({probs[runner]*100:.0f}%).")
 
     bars = ""
     for rank, i in enumerate(order):
@@ -276,7 +276,7 @@ def main():
 
     render_hero(class_names)
     st.write("")
-    tab_cls, tab_about, tab_guide = st.tabs(["🔍  Klasifikasi", "📊  Tentang Model", "🍓  Kenali Berry"])
+    tab_cls, tab_about, tab_guide = st.tabs(["🔍  Klasifikasi", "📊  Tentang Model", "  Kenali Berry"])
 
     with tab_cls:
         left, right = st.columns([1, 1.12], gap="large")
