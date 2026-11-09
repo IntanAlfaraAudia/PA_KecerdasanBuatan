@@ -3,13 +3,13 @@
 # Kunci = nama kelas persis seperti di class_names.json
 BERRY_INFO = {
     "Tayberry": {
-        "label": "Tayberry", "emoji": "🍓", "color": "#ff5d8f",
+        "label": "Tayberry", "color": "#ff5d8f",
         "latin": "Rubus fruticosus × R. idaeus",
         "desc": "Hasil silangan blackberry dan raspberry. Buahnya agak lonjong dan merah tua keunguan kalau sudah matang.",
         "ciri": ["Lonjong, merah tua keunguan", "Permukaan berbulir seperti raspberry", "Rasanya manis asam"],
     },
     "Wineberry": {
-        "label": "Wineberry", "emoji": "🍒", "color": "#ff3b4e",
+        "label": "Wineberry", "color": "#ff3b4e",
         "latin": "Rubus phoenicolasius",
         "desc": "Berry liar dari Asia Timur. Buahnya kecil, merah cerah, dan berbulir halus.",
         "ciri": ["Merah oranye sampai merah cerah", "Berbulir dan sering mengkilap", "Kelopak dan batangnya berbulu kemerahan"],
