@@ -180,16 +180,16 @@ def render_result(class_names, probs, blurry=False):
     # catatan sesuai kondisi hasil
     pair = {class_names[top], class_names[runner]} == {"Tayberry", "Wineberry"}
     if blurry:
-        callout("bad", "🌫️", "<b>Fotonya buram.</b> Waktu diuji, akurasi model turun sekitar 36 poin untuk gambar buram, "
+        callout("bad", "<b>Fotonya buram.</b> Waktu diuji, akurasi model turun sekitar 36 poin untuk gambar buram, "
                 "jadi hasil ini kurang bisa dipercaya. Coba foto ulang dengan fokus yang lebih tajam.")
     elif conf < LOW_CONF:
-        callout("bad", "⚠️", f"<b>Model kurang yakin</b> (di bawah {int(LOW_CONF*100)}%). Coba foto yang lebih tajam dan buahnya "
+        callout("bad", f"<b>Model kurang yakin</b> (di bawah {int(LOW_CONF*100)}%). Coba foto yang lebih tajam dan buahnya "
                 "lebih jelas. Ingat juga, model ini cuma kenal 5 jenis berry, jadi objek lain pasti ditebak jadi salah satunya.")
     elif pair and probs[runner] >= 0.25:
-        callout("warn", "", f"<b>Tayberry dan Wineberry memang mirip.</b> Model sempat ragu antara keduanya "
+        callout("warn", f"<b>Tayberry dan Wineberry memang mirip.</b> Model sempat ragu antara keduanya "
                 f"({escape(runner_label)} {probs[runner]*100:.0f}%). Dua kelas ini juga yang paling sering tertukar waktu evaluasi.")
     elif probs[runner] >= 0.30:
-        callout("warn", "", f"Tebakan kedua cukup dekat: <b>{escape(runner_label)}</b> ({probs[runner]*100:.0f}%).")
+        callout("warn", f"Tebakan kedua cukup dekat: <b>{escape(runner_label)}</b> ({probs[runner]*100:.0f}%).")
 
     bars = ""
     for rank, i in enumerate(order):
