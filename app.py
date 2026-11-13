@@ -184,7 +184,7 @@ def render_result(class_names, probs, blurry=False):
     pair = {class_names[top], class_names[runner]} == {"Tayberry", "Wineberry"}
     if blurry:
         callout("bad", "<b>Fotonya buram.</b> Waktu diuji, akurasi model turun sekitar 36 poin untuk gambar buram, "
-                "jadi hasil ini kurang bisa dipercaya. Coba foto ulang dengan fokus yang lebih tajam.")
+                "Coba foto ulang dengan fokus yang lebih tajam.")
     elif conf < LOW_CONF:
         callout("bad", f"<b>Model kurang yakin</b> (di bawah {int(LOW_CONF*100)}%). Coba foto yang lebih tajam dan buahnya "
                 "lebih jelas. Ingat juga, jadi objek lain pasti ditebak jadi salah satunya.")
@@ -241,12 +241,6 @@ def render_about():
                      f'<div class="bar"><div style="width:{a}%;background:{color}"></div></div></div>')
         html(f'<div class="card"><h3>Uji ketahanan (robustness)</h3><div class="sub">Akurasi saat gambar test diberi gangguan.</div>{bars}</div>')
 
-    callout("warn", "", "<b>Kelemahan model: blur.</b> Akurasi turun dari sekitar 88% jadi 52% kalau gambarnya buram. "
-            "Dugaan kami, model bergantung pada tekstur halus permukaan buah. Makanya aplikasi ini cek ketajaman foto dulu.")
-    callout("", "", "<b>Arsitektur:</b> CNN buatan sendiri, dilatih dari nol tanpa pre-trained weights. Terdiri dari 4 blok konvolusi "
-            "(Conv 3×3, BatchNorm, ReLU, MaxPool, Dropout), Global Average Pooling, Dense, lalu softmax 5 kelas.")
-    callout("", "", "<b>Yang sering tertukar:</b> Tayberry dan Wineberry, karena sama-sama merah dan berbulir. "
-            "Sekitar 64% kesalahan model jatuh ke kelas Wineberry.")
 
 
 def render_guide(class_names):
